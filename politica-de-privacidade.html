@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidade — Delivery Much</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --orange: #F26522;
+      --orange-light: #FF8C42;
+      --orange-pale: #FFF4ED;
+      --dark: #1A1A1A;
+      --gray: #6B6B6B;
+      --gray-light: #F5F5F5;
+      --white: #FFFFFF;
+      --border: #E8E8E8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: var(--dark);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--orange);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .header-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .header-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      font-weight: 300;
+      margin-top: 1px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #2d1a0e 50%, #3d2010 100%);
+      padding: 72px 32px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(242,101,34,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(242,101,34,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(242,101,34,0.15);
+      border: 1px solid rgba(242,101,34,0.3);
+      color: var(--orange-light);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Content */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* Intro card */
+    .intro-card {
+      background: var(--orange-pale);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 48px 0 40px;
+    }
+
+    .intro-card p {
+      font-size: 15px;
+      color: #4a2e1a;
+      line-height: 1.8;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-number {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* List */
+    .privacy-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    .privacy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #444;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gray-light);
+      line-height: 1.6;
+    }
+
+    .privacy-list li:last-child { border-bottom: none; }
+
+    .privacy-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--gray-light);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p {
+      font-size: 14px;
+      color: var(--gray);
+      margin: 0;
+    }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 48px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--orange);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact-card a {
+      color: var(--orange-light);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      background: var(--gray-light);
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 12px;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+    }
+
+    footer strong { color: var(--dark); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 52px 20px 44px; }
+      .container { padding: 0 20px 60px; }
+      .contact-card { flex-direction: column; }
+      .header-inner { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-mark">DM</div>
+      <div>
+        <div class="header-title">Delivery Much</div>
+        <div class="header-sub">Política de Privacidade</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-badge">📄 Documento oficial</div>
+    <h1>Política de <span>Privacidade</span></h1>
+    <p class="hero-meta">Última atualização: maio de 2026</p>
+  </div>
+
+  <div class="container">
+
+    <div class="intro-card">
+      <p>Esta Política de Privacidade descreve como o aplicativo <strong>Delivery Much</strong>, integrado à plataforma Meta (Facebook/Instagram), coleta, utiliza e protege as informações obtidas por meio da API de Marketing da Meta. Ao utilizar nosso aplicativo, você concorda com os termos descritos neste documento.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">01</div>
+      <h2>Informações que Coletamos</h2>
+      <p>Por meio da integração com a API de Marketing da Meta, nosso aplicativo pode acessar as seguintes informações:</p>
+      <ul class="privacy-list">
+        <li>Dados de contas de anúncios associadas ao seu perfil comercial (Business Manager)</li>
+        <li>Métricas e relatórios de desempenho de campanhas publicitárias</li>
+        <li>Informações sobre conjuntos de anúncios, criativos e públicos</li>
+        <li>Dados de faturamento e orçamento das contas de anúncio autorizadas</li>
+        <li>Identificadores de negócios (Business ID) e páginas vinculadas</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-number">02</div>
+      <h2>Como Usamos as Informações</h2>
+      <p>As informações coletadas são utilizadas exclusivamente para as seguintes finalidades:</p>
+      <ul class="privacy-list">
+        <li>Gerenciamento e otimização de campanhas publicitárias no Meta Ads</li>
+        <li>Geração de relatórios de desempenho e análise de métricas</li>
+        <li>Criação, edição e monitoramento de anúncios</li>
+        <li>Automação de tarefas relacionadas à gestão de mídia paga</li>
+      </ul>
+      <div class="highlight-box">
+        <p>⚠️ Não compartilhamos, vendemos ou transferimos suas informações para terceiros. Os dados são utilizados apenas para operação interna do aplicativo.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-number">03</div>
+      <h2>Armazenamento e Segurança</h2>
+      <p>Adotamos medidas técnicas e organizacionais adequadas para proteger as informações contra acesso não autorizado, alteração, divulgação ou destruição. Os tokens de acesso fornecidos pela Meta são armazenados com criptografia e utilizados apenas nas operações autorizadas pelo usuário.</p>
+      <p>Os dados não são retidos além do período necessário para a execução das funcionalidades do aplicativo.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">04</div>
+      <h2>Permissões Utilizadas</h2>
+      <p>Nosso aplicativo solicita as seguintes permissões da API da Meta:</p>
+      <ul class="privacy-list">
+        <li><strong>ads_management</strong> — Leitura e gerenciamento de contas de anúncios</li>
+        <li><strong>ads_read</strong> — Acesso a relatórios e métricas de anúncios</li>
+        <li><strong>business_management</strong> — Acesso à API do Gerenciador de Negócios</li>
+      </ul>
+      <p>Todas as permissões são solicitadas apenas quando estritamente necessárias para o funcionamento do serviço.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">05</div>
+      <h2>Seus Direitos</h2>
+      <p>Você pode, a qualquer momento:</p>
+      <ul class="privacy-list">
+        <li>Revogar o acesso do aplicativo às suas contas diretamente nas configurações do Facebook</li>
+        <li>Solicitar a exclusão dos dados associados ao seu uso do aplicativo</li>
+        <li>Solicitar informações sobre quais dados estão sendo processados</li>
+      </ul>
+      <p>Para revogar o acesso: acesse <strong>Facebook → Configurações → Aplicativos e Sites</strong> e remova o aplicativo Delivery Much.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">06</div>
+      <h2>Conformidade com as Políticas da Meta</h2>
+      <p>Este aplicativo foi desenvolvido em conformidade com os <a href="https://developers.facebook.com/terms/" target="_blank" style="color: var(--orange);">Termos de Serviço da Plataforma Meta</a> e as <a href="https://developers.facebook.com/devpolicy/" target="_blank" style="color: var(--orange);">Políticas para Desenvolvedores</a>. Nos comprometemos a manter a conformidade com quaisquer atualizações nas políticas da Meta.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-number">07</div>
+      <h2>Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando isso ocorrer, a data de "Última atualização" no topo desta página será revisada. Recomendamos que você revise esta política regularmente.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h3>Dúvidas ou solicitações?</h3>
+        <p>Entre em contato com nossa equipe pelo e-mail<br>
+        <a href="mailto:privacidade@deliverymuch.com.br">privacidade@deliverymuch.com.br</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <strong>Delivery Much</strong> &nbsp;·&nbsp; Política de Privacidade &nbsp;·&nbsp; © 2026 Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
